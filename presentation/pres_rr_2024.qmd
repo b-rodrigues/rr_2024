@@ -22,4 +22,12 @@ execute:
 
 - Code source disponible ici: [https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd](https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd)
 
-## Le problème
+## Le(s) problème(s)
+
+- Collaboration sur environnements hétérogènes
+- Reproductibilité des projets
+- Déployer le même environnement "partout"
+
+## La solution en vogue
+
+- Docker + `{renv}`

@@ -10,3 +10,16 @@ format:
 execute:
   echo: true
 ---
+
+## Qui suis-je?
+
+- Bruno Rodrigues, responsable des départements "statistiques" et "stratégie de données" du Ministère 
+  de la Recherche et de l’Enseignement supérieur au Luxembourg
+
+- Utilisateur de R depuis 2009
+
+- Cette présentation est disponible sur le lien suivant [https://is.gd/nix_rr_2024](https://is.gd/nix_rr_2024)
+
+- Code source disponible ici: [https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd](https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd)
+
+## Le problème

@@ -14,5 +14,5 @@ list(
     command = quarto::quarto_render("tuto/tuto_rr_2024.qmd"),
     format = "file", 
     force = TRUE
-  
+  )
 )

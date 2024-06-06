@@ -1,0 +1,14 @@
+.gitignore
+.quarto/xref/932330ae
+.quarto/xref/INDEX
+.quarto/xref/a49d6b69
+.targets-files
+_targets/.gitignore
+_targets/meta/meta
+_targets/meta/process
+_targets/meta/progress
+_targets/objects/pres_change
+_targets/objects/tuto_change
+rendered_slides/presentation/pres_rr_2024.html
+rendered_slides/tuto/tuto_rr_2024.html
+result

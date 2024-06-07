@@ -22,8 +22,9 @@ execute:
 
 - Code source disponible ici: [https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd](https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd)
 
-## Le(s) problème(s)
+## Nix et les problèmes qu'il résoud
 
+- Nix: un gestionnaire de paquets
 - Collaboration sur environnements hétérogènes
 - Reproductibilité des projets
 - Déployer le même environnement "partout"

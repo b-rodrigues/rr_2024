@@ -1225,6 +1225,28 @@ in
     buildInputs = [ system_packages ];
     shellHook = &quot;R --vanilla&quot;;
   }</code></pre>
+</section>
+<section id="un-gestionnaire-de-paquets-fonctionnel-et-déclaratif-1" class="slide level2">
+<h2>Un gestionnaire de paquets fonctionnel et déclaratif</h2>
+<p>Défini le dépôt à utiliser (avec un commit figé)</p>
+<pre><code>let
+  pkgs = import (fetchTarball &quot;https://github.com/NixOS/nixpkgs/archive/976fa3369d722e76f37c77493d99829540d43845.tar.gz&quot;) {};</code></pre>
+<p><code>nixpkgs</code>: dépôt Github qui contient 100’000 expressions</p>
+</section>
+<section id="un-gestionnaire-de-paquets-fonctionnel-et-déclaratif-2" class="slide level2">
+<h2>Un gestionnaire de paquets fonctionnel et déclaratif</h2>
+<p>Liste les paquets à installer</p>
+<pre><code>  system_packages = builtins.attrValues {
+    inherit (pkgs) R ;
+  };</code></pre>
+</section>
+<section id="un-gestionnaire-de-paquets-fonctionnel-et-déclaratif-3" class="slide level2">
+<h2>Un gestionnaire de paquets fonctionnel et déclaratif</h2>
+<p>Défini ce qui doit être construit: un <em>shell</em></p>
+<pre><code>  pkgs.mkShell {
+    buildInputs = [ system_packages ];
+    shellHook = &quot;R --vanilla&quot;;
+  }</code></pre>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

@@ -76,4 +76,35 @@ in
   }
 ```
 
+## Un gestionnaire de paquets fonctionnel et déclaratif
 
+Défini le dépôt à utiliser (avec un commit figé)
+
+```
+let
+  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/976fa3369d722e76f37c77493d99829540d43845.tar.gz") {};
+```
+
+`nixpkgs`: dépôt Github qui contient 100'000 expressions
+
+
+## Un gestionnaire de paquets fonctionnel et déclaratif
+
+Liste les paquets à installer
+
+```
+  system_packages = builtins.attrValues {
+    inherit (pkgs) R ;
+  };
+```
+
+## Un gestionnaire de paquets fonctionnel et déclaratif
+
+Défini ce qui doit être construit: un *shell*
+
+```
+  pkgs.mkShell {
+    buildInputs = [ system_packages ];
+    shellHook = "R --vanilla";
+  }
+```

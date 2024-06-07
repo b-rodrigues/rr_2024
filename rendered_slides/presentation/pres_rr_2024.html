@@ -1174,8 +1174,57 @@ Bruno Rodrigues
 <section id="la-solution-en-vogue" class="slide level2">
 <h2>La solution en vogue</h2>
 <ul>
-<li class="fragment">Docker + <code>{renv}</code></li>
+<li class="fragment">Docker + <code>{renv}</code> ou autre tant qu’on arrive à installer</li>
+<li class="fragment">les mêmes paquets R</li>
+<li class="fragment">la même version de R</li>
+<li class="fragment">les mêmes dépendances “système” (<code>gdal</code> pour <code>{terra}</code> par exemple)</li>
 </ul>
+</section>
+<section id="le-gestionnaire-de-paquets-nix-13" class="slide level2">
+<h2>Le gestionnaire de paquets Nix (1/3)</h2>
+<ul>
+<li class="fragment">Pas une alternative à Docker!</li>
+<li class="fragment">Mais permet de résoudre les mêmes problèmes</li>
+<li class="fragment">La promesse de Nix:</li>
+</ul>
+<div class="fragment">
+<p><em>Installe tous les logiciels nécessaires (R, paquets R, librairies de développement, etc) de manière totalement reproductible et sur n’importe quelle plate-forme en écrivant une seule expression dans le langage Nix.</em></p>
+</div>
+</section>
+<section id="le-gestionnaire-de-paquets-nix-23" class="slide level2">
+<h2>Le gestionnaire de paquets Nix (2/3)</h2>
+<ul>
+<li class="fragment">Avec Nix, on configure une fois et on exécute partout!</li>
+<li class="fragment">Partout: ordinateur ou serveur: Windows (via WSL2), Linux (même Android) ou macOS</li>
+<li class="fragment">Pour R: 99% des paquets CRAN + Bioconductor disponibles</li>
+</ul>
+</section>
+<section id="le-gestionnaire-de-paquets-nix-33" class="slide level2">
+<h2>Le gestionnaire de paquets Nix (3/3)</h2>
+<ul>
+<li class="fragment">Nix: gestionnaire de paquets <em>fonctionnel</em> (inspiré du lambda-calcul)</li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/procedural_vs_fonctional.png"></p>
+<figcaption>Attention aux effets de bord!</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="un-gestionnaire-de-paquets-fonctionnel-et-déclaratif" class="slide level2">
+<h2>Un gestionnaire de paquets fonctionnel et déclaratif</h2>
+<pre><code>let
+  pkgs = import (fetchTarball &quot;https://github.com/NixOS/nixpkgs/archive/976fa3369d722e76f37c77493d99829540d43845.tar.gz&quot;) {};
+  system_packages = builtins.attrValues {
+    inherit (pkgs) R ;
+  };
+in
+  pkgs.mkShell {
+    buildInputs = [ system_packages ];
+    shellHook = &quot;R --vanilla&quot;;
+  }</code></pre>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

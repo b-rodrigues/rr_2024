@@ -63,6 +63,8 @@ une seule expression dans le langage Nix.*
 
 ## Un gestionnaire de paquets fonctionnel et déclaratif
 
+Nix utilise des expressions écrite dans le langage Nix pour installer des paquets:
+
 ```
 let
   pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/976fa3369d722e76f37c77493d99829540d43845.tar.gz") {};
@@ -108,3 +110,77 @@ Défini ce qui doit être construit: un *shell*
     shellHook = "R --vanilla";
   }
 ```
+
+## Le langage nix
+
+- Écrire ces expressions nécessite l'apprentissage d'une nouveau langage
+- Un langage puissant certes... mais si tout ce qu'on veut c'est des environnements de développement reproductibles...
+- ...alors `{rix}` est la solution!
+
+## rix: usage de base (1/2)
+
+- `{rix}` ([site](https://b-rodrigues.github.io/rix/index.html)) génère des expressions Nix!
+- Il suffit d'utiliser la fonction `rix()`:
+
+. . .
+
+```{r, eval = FALSE}
+library(rix)
+
+rix(r_ver = "4.3.1",
+    r_pkgs = c("dplyr", "ggplot2"),
+    system_pkgs = NULL,
+    git_pkgs = NULL,
+    tex_pkgs = NULL,
+    ide = "rstudio",
+    project_path = ".")
+```
+
+- Génère `default.nix` avec l'expression Nix qu'il faut!
+
+## rix: usage de base (2/2)
+
+- Build: `nix-build`
+- Run: `nix-shell`
+
+## rix: usage de base (2/2)
+
+{{< video https://youtu.be/oKmFNQ-AzeQ >}}
+
+## rix et targets
+
+{{< video https://youtu.be/GMDWZqzvl9c >}}
+
+## rix et targets
+
+- Aussi possible d'exécuter les pipelines sur Github Actions!
+- `rix::tar_nix_ga()` génère le fichier yaml qu'il faut
+- On commit et pousse et c'est parti!
+
+## rix et targets
+
+{{< video https://youtu.be/gQ7NN_ZIcY0 >}}
+
+
+## rix et les subshells
+
+- Possible d'exécuter du code dans un "sous-environnement"
+- On peut récupérer le résultat dans la session principale!
+
+## rix et les subshells
+
+{{< video https://youtu.be/bz-A-uS-cIw >}}
+
+## Pour en apprendre plus
+
+- Documentation officielle de Nix: [https://nix.dev/](https://nix.dev/)
+
+- Nix pills: [https://nixos.org/guides/nix-pills/00-preface](https://nixos.org/guides/nix-pills/00-preface)
+
+- Tuto Nix par l'INRIA: [https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/)
+
+- rix: [https://b-rodrigues.github.io/rix/](https://b-rodrigues.github.io/rix/)
+
+- Mon blog: [https://www.brodrigues.co/tags/nix/](https://www.brodrigues.co/tags/nix/)
+
+- Mon livre (ne parle pas de Nix, mais de reproductibilité avec Docker et renv): [https://raps-with-r.dev/](https://raps-with-r.dev/)

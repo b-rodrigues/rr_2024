@@ -24,17 +24,19 @@ execute:
 
 ## Nix et les problèmes qu'il résoud
 
-- Nix: un gestionnaire de paquets
-- Collaboration sur environnements hétérogènes
-- Reproductibilité des projets
-- Déployer le même environnement "partout"
+- Nix: un gestionnaire de paquets dispo pour Linux, Windows (via WSL2) et macOS
+- Permet de construire des environnements de développements reproductibles
+- Autrement dit, adieu...
+- ... la collaboration sur environnements hétérogènes
+- ... les projets pas reproductibles
+- ... pas pouvoir déployer le même environnement "partout"
 
-## La solution en vogue
+## La solution "classique"
 
-- Docker + `{renv}` ou autre tant qu'on arrive à installer
-- les mêmes paquets R
-- la même version de R
-- les mêmes dépendances "système" (`gdal` pour `{terra}` par exemple)
+- Docker + `{renv}` (ou autre tant qu'on arrive à installer...)
+- ... les mêmes paquets R
+- ... la même version de R
+- ... les mêmes dépendances "système" (`gdal` pour `{terra}` par exemple)
 
 ## Le gestionnaire de paquets Nix (1/3)
 
@@ -53,6 +55,7 @@ une seule expression dans le langage Nix.*
 - Avec Nix, on configure une fois et on exécute partout!
 - Partout: ordinateur ou serveur: Windows (via WSL2), Linux (même Android) ou macOS
 - Pour R: 99% des paquets CRAN + Bioconductor disponibles
+- Aussi possible d'installer des paquets Git-hub/lab
 
 ## Le gestionnaire de paquets Nix (3/3)
 

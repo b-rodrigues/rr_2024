@@ -1,6 +1,8 @@
-.gitignore
+.quarto/_freeze/presentation/pres_rr_2024/execute-results/html.json
 .quarto/xref/15459ee0
+.quarto/xref/539b29cf
 .quarto/xref/773867ac
+.quarto/xref/8ce70057
 .quarto/xref/932330ae
 .quarto/xref/INDEX
 .quarto/xref/a49d6b69
@@ -14,6 +16,7 @@ _targets/meta/process
 _targets/meta/progress
 _targets/objects/pres_change
 _targets/objects/tuto_change
+rendered_slides/presentation/img/procedural_vs_fonctional.png
 rendered_slides/presentation/pres_rr_2024.html
 rendered_slides/tuto/tuto_rr_2024.html
 result

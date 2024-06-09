@@ -1,5 +1,5 @@
 let
-  # On définit les repos à utiliser
+  # On définit les dépôts à utiliser
   # il s'agit ici du repo officiel 'nixpkgs' officiel de NixOS
   # on pointe sur le "head" de master, donc cette expression ne
   # sera par reproductible!

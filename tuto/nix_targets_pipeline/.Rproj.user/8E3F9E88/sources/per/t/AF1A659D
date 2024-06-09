@@ -1,0 +1,26 @@
+{
+    "id": "AF1A659D",
+    "path": "~/Documents/github_repos/russ_workshop/expressions/nix_targets_pipeline/default.nix",
+    "project_path": "default.nix",
+    "type": "text",
+    "hash": "2093853639",
+    "contents": "",
+    "dirty": false,
+    "created": 1717773730042.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "54,23",
+        "scrollLine": "45"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1717773757,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1717773757,
+    "read_only": false,
+    "read_only_alternatives": []
+}

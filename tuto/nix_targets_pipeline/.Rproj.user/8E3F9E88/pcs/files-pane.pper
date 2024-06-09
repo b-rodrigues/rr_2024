@@ -1,0 +1,9 @@
+{
+    "sortOrder": [
+        {
+            "columnIndex": 2,
+            "ascending": true
+        }
+    ],
+    "path": "~/Documents/github_repos/russ_workshop/expressions/nix_targets_pipeline"
+}

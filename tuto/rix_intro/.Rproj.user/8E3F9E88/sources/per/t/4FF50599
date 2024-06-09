@@ -1,0 +1,26 @@
+{
+    "id": "4FF50599",
+    "path": "~/Documents/github_repos/russ_workshop/expressions/rix_intro/default.nix",
+    "project_path": "default.nix",
+    "type": "text",
+    "hash": "3794924828",
+    "contents": "",
+    "dirty": false,
+    "created": 1717772961840.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "44,39",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1717772997,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1717772997,
+    "read_only": false,
+    "read_only_alternatives": []
+}

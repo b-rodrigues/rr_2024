@@ -1,3 +1,5 @@
+#voir https://b-rodrigues.github.io/rix/articles/z-advanced-topic-running-r-or-shell-code-in-nix-from-r.html#case-study-2-breaking-changes-in-stringr-1-5-0 
+
 library("rix")
 
 path_env_stringr <- file.path(".", "_env_stringr_1.4.1")

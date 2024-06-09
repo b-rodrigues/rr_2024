@@ -9,3 +9,5 @@ then the environment gets built by Nix in the Github Actions.
 
 Outputs of the runs can be found in the target-runs branch of this
 repository.
+
+See: https://github.com/b-rodrigues/nix_targets_pipeline 

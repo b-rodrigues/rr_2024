@@ -1,0 +1,26 @@
+{
+    "id": "25BEA2BF",
+    "path": "~/Documents/github_repos/russ_workshop/expressions/nix_targets_pipeline/analyse_data.Rmd",
+    "project_path": "analyse_data.Rmd",
+    "type": "r_markdown",
+    "hash": "232439580",
+    "contents": "",
+    "dirty": false,
+    "created": 1717773563109.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "10,21",
+        "scrollLine": "4"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1717688722,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1717688722,
+    "read_only": false,
+    "read_only_alternatives": []
+}

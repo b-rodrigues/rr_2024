@@ -65,12 +65,38 @@ Pour réaliser cela, Nix installe les logiciels "à sa façon":
 En conclusion, cela signifie que pour installer un logiciel, ou un environnement complet, il va falloir écrire un
 script dans lequel nous déclarerons tout ce qui est nécessaire.
 
+Si vous n’avez pas déjà installé Nix, c’est maintenant le moment de le faire, en utilisant l’installateur
+de [Determinate Systems](https://github.com/DeterminateSystems/nix-installer). Lancez la commande depuis
+la ligne de commande sous Linux ou macOS:
+```
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+
+et pour Windows, lisez [ici](https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#in-wsl2).
+
 ## default.nix
 
 Un fichier `default.nix` est un fichier qui contient une expression écrite dans le langage Nix. Évaluer cette
 expression résultera dans l’installation d’un logiciel, ou dans ce qui nous intéresse dans environnement 
 de développement reproductible. Ouvrez le fichier `basic/default.nix`. Celui-ci contient à peu près tout ce
 que vous devez connaître du langage pour pouvoir l’utiliser.
+
+Vous pouvez installer l’environnement en utilisant la commande `nix-build` depuis la ligne de commande
+(terminal sous Linux ou macOS, WSL2 depuis Windows). Cela va télécharger les logiciels depuis le cache
+public de NixOS (une distribution Linux utilisant Nix comme gestionnaire de paquets) et installer 
+l’environnement. Vous verrez un fichier `result` apparaître dans le même dossier. Il s’agit d’un raccourci
+vers le dossier d’installation de l’environnement dans le *Nix store*. Pour récupérer de la place, si vous
+n’avez plus besoin d’un environnement, vous pouvez effacer ce fichier `result` et ensuite appeler `nix-store --gc`.
+
+Pour pouvoir utiliser l’environnement, utilisez `nix-shell`. Après quelques instants l’environnement est chargé
+et vous pouvez l’utiliser. Lancer `which R` par exemple ou `which python`. Démarrez R dans ce shell avec `R`
+et chargez le paquet `{reticulate}`:
+
+```
+library(reticulate)
+
+py_run_string("print('coucou depuis Python')")
+```
 
 
 

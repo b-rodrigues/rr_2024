@@ -130,10 +130,20 @@ applications graphiques pour pouvoir utiliser une interface installée via Nix, 
 
 ## Nix et {targets}
 
+Ouvrez le dossier `tuto/nix_targets_pipeline` et inspectez le fichier `_targets.R` et ensuite `create_env.R`. 
+Exécuter `create_env.R` génère un fichier `default.nix` qui défini un environnement dans lequel la pipeline
+`{targets}` peut s’exécuter de manière totalement reproductible. La pipeline s’exécute au lancement du shell.
+Il est ensuite possible d’inspecter les éléments soit dans le même environnement, soit dans votre environnement
+R "système" en chargeant simplement les *targets* avec `targets::tar_load(nom_du_target)`. Il est aussi possible
+d’exécuter la pipeline sur Github Actions. Lancez `rix::tar_nix_ga()` pour écrire le fichier YAML nécessaire. 
+Vous pouvez ensuite *commit* et *push* et voir la pipeline s’exécuter sur Github Actions. Regardez 
+[ici](https://github.com/b-rodrigues/nix_targets_pipeline/tree/master) pour un exemple.
 
+## Exécuter du code dans un subshell
 
-
-
+Il est possible d’exécuter du code dans un *subshell* avec `with_nix()`. Cela signifie que l’on va exécuter une 
+function dans un environnement qui peut être différent de l’environnement principal et que l’on récupère
+ensuite l’output de cette fonction dans la session principale. Regardez `tuto/subshell/` pour un tel exemple.
 
 
 

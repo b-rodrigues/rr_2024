@@ -99,5 +99,5 @@ in
     buildInputs = [ system_packages rpkgs pypkgs git_pkgs tex ];
 
     # On définit une commande, optionnelle, à executer à l'entrée du shell
-    shellHook = "echo 'Welcome to your development environment!\n'";
+    shellHook = "echo 'Welcome to your development environment!'";
   }

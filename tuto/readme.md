@@ -101,12 +101,26 @@ py_run_string("print('coucou depuis Python')")
 Ce fichier illustre les fonctionnalités principales qui nous intéressent: installer n’importe quel logiciel depuis les 
 dépôts de Nix (cherchez des paquets [ici](https://search.nixos.org/packages)), installer des paquets depuis
 Github et définir une commande à exécuter quand on démarre le *shell* Nix (à partir de maintenant, je vais utiliser
-le mot *shell* pour parler d’environnement de développement.
+le mot *shell* pour parler d’environnement de développement).
 
+## Générer des expressions avec rix()
 
+Écrire ces expressions peut être assez complexe, c’est pourquoi on va utiliser la fonction `rix()` afin de les générer.
+Pour l’instant, `{rix}` n’est pas disponible sur le CRAN, mais vous pouvez l’installer avec les commandes suivantes:
 
+```
+install.packages("rix", repos = c("https://b-rodrigues.r-universe.dev",
+  "https://cloud.r-project.org"))
+```
 
+Ou si vous êtes sur un système sur lequel R n’est pas installé mais sur lequel Nix est installé, vous pouvez aussi
+lancer cette commande:
 
+```
+nix-shell --expr "$(curl -sl https://raw.githubusercontent.com/b-rodrigues/rix/master/inst/extdata/default.nix)"
+```
+
+Cette commande va démarrer un shell avec R at `{rix}` installé. Une fois `{rix}` installé ouvrez `tuto/rix_intro/generate_env_vscode.R` et `tuto/rix_intro/generate_env_rstudio.R`.
 
 
 

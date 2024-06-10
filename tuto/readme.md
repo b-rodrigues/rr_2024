@@ -121,6 +121,19 @@ nix-shell --expr "$(curl -sl https://raw.githubusercontent.com/b-rodrigues/rix/m
 ```
 
 Cette commande va démarrer un shell avec R at `{rix}` installé. Une fois `{rix}` installé ouvrez `tuto/rix_intro/generate_env_vscode.R` et `tuto/rix_intro/generate_env_rstudio.R`.
+Ces deux scripts montrent comment utiliser `rix()`; lancez la fonction et ouvrez le fichier `default.nix` qui est généré. Il faut
+savoir qu’il est possible d’utiliser un environnement de développement Nix avec un IDE, néanmoins, RStudio est un peu particulier
+et doit aussi être installé avec Nix pour fonctionner. Le problème est que RStudio n’est pas disponible ni pour macOS ni pour 
+architecture ARM pour Linux via Nix. Il n’y a toutefois pas de soucis sous Linux ou si vous utilisez un autre environnement comme
+VS Code ou Emacs ou Vim. Si vous utilisez WSL2, vous devez configurer WSL2 de sorte à ce qu’il soit possible de lancer des 
+applications graphiques pour pouvoir utiliser une interface installée via Nix, voir [ici](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps).
+
+## Nix et {targets}
+
+
+
+
+
 
 
 

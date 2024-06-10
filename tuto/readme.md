@@ -98,7 +98,10 @@ library(reticulate)
 py_run_string("print('coucou depuis Python')")
 ```
 
-
+Ce fichier illustre les fonctionnalités principales qui nous intéressent: installer n’importe quel logiciel depuis les 
+dépôts de Nix (cherchez des paquets [ici](https://search.nixos.org/packages)), installer des paquets depuis
+Github et définir une commande à exécuter quand on démarre le *shell* Nix (à partir de maintenant, je vais utiliser
+le mot *shell* pour parler d’environnement de développement.
 
 
 

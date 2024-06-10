@@ -56,7 +56,11 @@ la même version des logiciels demandés. Autrement dit, si `f` est une fonction
 alors `f("logiciel")` va toujours installer exactement la même version de "logiciel" quelque soit la plateforme,
 la date, bref, quelque soit "l’état du monde".
 
+Pour réaliser cela, Nix installe les logiciels "à sa façon":
 
+- Aucune connexion internet n’est autorisé lors du processus de compilation. Toutes les ressources nécessaires doivent être déclarées au préalable et sont téléchargées avant toute chose
+- Aucune dépendance non-déclarée ne peut être utilisée. Si installer un logiciel X nécessite une dépendance Y, alors Y sera aussi installée avec Nix, même si une version de Y est déjà disponible sur la machine. Il en va de même pour les dépendances Z de Y.
+- Aucune variable d’environnement ne peut-être utilisée: il faut les déclarer avec Nix aussi.
 
 
 

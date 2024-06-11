@@ -56,6 +56,7 @@ une seule expression dans le langage Nix.*
 - Partout: ordinateur ou serveur: Windows (via WSL2), Linux (même Android) ou macOS
 - Pour R: 99% des paquets CRAN + Bioconductor disponibles
 - Aussi possible d'installer des paquets Git-hub/lab
+- Installe les dépendances Z d'un paquet X, les dépendances Y de Z, et ainsi de suite...
 
 ## Le gestionnaire de paquets Nix (3/3)
 
@@ -81,13 +82,6 @@ in
     shellHook = "R --vanilla";
   }
 ```
-
-
-## Le langage nix
-
-- Écrire ces expressions nécessite l'apprentissage d'une nouveau langage
-- Un langage puissant certes... mais si tout ce qu'on veut c'est des environnements de développement reproductibles...
-- ...alors `{rix}` est la solution!
 
 ## rix: usage de base (1/2)
 

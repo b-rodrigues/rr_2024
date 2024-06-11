@@ -22,7 +22,7 @@ execute:
 
 - Code source disponible ici: [https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd](https://github.com/b-rodrigues/rr_2024/blob/main/presentation/pres_rr_2024.qmd)
 
-## Nix et les problèmes qu'il résoud
+## Nix et les problèmes qu'il résout
 
 - Nix: un gestionnaire de paquets dispo pour Linux, Windows (via WSL2) et macOS
 - Permet de construire des environnements de développements reproductibles

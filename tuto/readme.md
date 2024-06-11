@@ -210,8 +210,19 @@ souhaitez la déployer, toujours en utilisant le même `default.nix`. Il serait
 aussi possible de simplement lancer l'application depuis l'environnement sur un
 serveur.
 
+## Pour en savoir plus
 
+- Documentation officielle de Nix: [https://nix.dev/](https://nix.dev/)
 
+- Nix pills: [https://nixos.org/guides/nix-pills/00-preface](https://nixos.org/guides/nix-pills/00-preface)
 
+- Tuto Nix par l'INRIA: [https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/)
 
+- Site de rix: [https://b-rodrigues.github.io/rix/](https://b-rodrigues.github.io/rix/)
+
+- Github de rix: [https://github.com/b-rodrigues/rix](https://github.com/b-rodrigues/rix)
+
+- Mon blog: [https://www.brodrigues.co/tags/nix/](https://www.brodrigues.co/tags/nix/)
+
+- Mon livre (ne parle pas de Nix, mais de reproductibilité avec Docker et renv): [https://raps-with-r.dev/](https://raps-with-r.dev/)
 

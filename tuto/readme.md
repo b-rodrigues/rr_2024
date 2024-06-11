@@ -195,8 +195,11 @@ Nix n'est pas une alternative à Docker, même s'il permet de résoudre des
 problèmes similaires. Autrement dit, il est tout à fait possible d'utiliser Nix
 pour créer une image Docker de manière reproductible. Pour cela, utilisez un
 script `{rix}` pour générer le `default.nix` qu'il vous faut, ensuite copiez le
-et utilisez-le lors du build de l'image Docker. Vous avez maintenant une image
+et utilisez le lors du build de l'image Docker. Vous avez maintenant une image
 avec les outils qu'il vous faut.
+
+Étant donné que Nix s'occupe de générer un environnement reproductible, vous
+pouvez utiliser `ubuntu:latest` comme image de base. Regardez dans `tuto/docker`.
 
 ## Shiny et Nix
 

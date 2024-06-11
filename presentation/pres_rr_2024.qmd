@@ -117,11 +117,11 @@ rix(r_ver = "4.3.1",
 
 ## rix: usage de base (2/2)
 
-{{< video https://youtu.be/oKmFNQ-AzeQ >}}
+{{< video https://youtu.be/oKmFNQ-AzeQ width="850" height="540" >}}
 
 ## rix et targets
 
-{{< video https://youtu.be/GMDWZqzvl9c >}}
+{{< video https://youtu.be/GMDWZqzvl9c width="850" height="540" >}}
 
 ## rix et targets
 
@@ -131,7 +131,7 @@ rix(r_ver = "4.3.1",
 
 ## rix et targets
 
-{{< video https://youtu.be/gQ7NN_ZIcY0 >}}
+{{< video https://youtu.be/gQ7NN_ZIcY0 width="850" height="540" >}}
 
 
 ## rix et les subshells
@@ -141,7 +141,7 @@ rix(r_ver = "4.3.1",
 
 ## rix et les subshells
 
-{{< video https://youtu.be/bz-A-uS-cIw >}}
+{{< video https://youtu.be/bz-A-uS-cIw  width="850" height="540" >}}
 
 ## Pour en apprendre plus
 

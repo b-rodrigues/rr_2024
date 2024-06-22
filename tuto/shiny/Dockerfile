@@ -10,6 +10,10 @@ RUN curl -O https://raw.githubusercontent.com/b-rodrigues/rix/master/inst/extdat
 # Copy a script to generate the environment of interest using rix
 COPY generate_env.R .
 
+# Copy the required scripts for the app
+COPY ui.R .
+COPY server.R .
+
 RUN curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux \
   --extra-conf "sandbox = false" \
   --init none \
@@ -20,6 +24,8 @@ ENV PATH="${PATH}:/nix/var/nix/profiles/default/bin"
 # This will overwrite the default.nix we downloaded with a new one
 RUN nix-shell --run "Rscript generate_env.R"
 
+EXPOSE 3838
+
 RUN nix-build
 
-CMD nix-shell
+CMD nix-shell --run 'Rscript -e "shiny::runApp(port = 3838, host = \"0.0.0.0\")"'

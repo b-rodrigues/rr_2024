@@ -1,2 +1,6 @@
 /.quarto/
+.Rhistory
 result/
+*.Rproj
+*.Rproj.*
+
